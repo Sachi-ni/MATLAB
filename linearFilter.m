@@ -20,5 +20,6 @@ function I = linearFilter(I)
             I(x,y) = S;
         end
     end
-
+    I = uint8(I);
                      
+
