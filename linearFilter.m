@@ -14,7 +14,11 @@ function I = linearFilter(I)
             S = 0;
             for i =-K:K
                 for j= -L:L
-                     p=j(x+i,y+j)*F(K+i+1,L+j+1);
-                     S=S+uint32(P);
+                    S= S + J(x+i, y+j)* F(K+i+1, L+j+1);
                 end
+            end
+            I(x,y) = S;
+        end
+    end
+
                      
