@@ -3,7 +3,7 @@ if length(size(I))==3
     I=rgb2gray(I);
 end
 
-I = imnoise(I, 'gaussian');
+I = imnoise(I, 'salt & pepper');
 
 H = @(x) min(x(:));
 Jmin = nlfilter(I,[3,3],H);
