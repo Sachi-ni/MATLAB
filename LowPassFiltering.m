@@ -1,4 +1,9 @@
-img = imread('cameraman.jfif');
+img = imread('Lena.png');
+if length(size(img)) == 3
+    img = rgb2gray(img);
+end
+
+img = double(img);
 
 F = fft2(img);
 F_shift = fftshift(F);
